@@ -12,12 +12,13 @@ export default function Login() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // In a real app, you would validate and authenticate here
     router.push("/account");
   };
 
   return (
-    <div className="flex flex-col h-full p-6">
-      <div className="flex-1 flex flex-col justify-start pt-8">
+    <div className="flex flex-col h-full p-6 bg-[#F8F8F8]">
+      <div className="pt-8">
         <h1 className="text-3xl font-bold text-gray-800 mb-2">
           Signin to your
           <br />
@@ -41,7 +42,7 @@ export default function Login() {
               id="email"
               type="text"
               placeholder="Enter email address"
-              className="w-full p-3 border border-gray-300 rounded-md"
+              className="w-full p-3 border border-gray-300 rounded-[8px]  bg-white"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -58,7 +59,7 @@ export default function Login() {
               id="password"
               type="password"
               placeholder="Enter password"
-              className="w-full p-3 border border-gray-300 rounded-md"
+              className="w-full p-3 border border-gray-300 rounded-[8px]  bg-white"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -68,7 +69,7 @@ export default function Login() {
             type="submit"
             className={`w-full py-3 ${
               email && password ? "bg-[#7F3DFF]" : "bg-[#CCCCCC]"
-            } text-white text-center rounded-md font-medium`}
+            } text-white rounded-[8px] text-center  font-medium`}
           >
             Login
           </button>

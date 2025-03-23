@@ -27,20 +27,23 @@ export default function Register() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // In a real app, you would validate and submit the form data here
     router.push("/account");
   };
 
   return (
-    <div className="flex flex-col h-full p-6 overflow-y-auto">
-      <div className="flex-1 flex flex-col justify-start pt-8">
-        <h1 className="text-3xl font-bold text-gray-800 mb-8">
+    <div className="min-h-screen bg-[#F8F8F8] p-6 flex flex-col">
+      <div className="mb-6">
+        <h1 className="text-3xl font-bold text-gray-800 mb-1">
           Create your
           <br />
           PopX account
         </h1>
+      </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="space-y-1">
+      <form onSubmit={handleSubmit} className="flex-1 flex flex-col">
+        <div className="space-y-4 flex-1">
+          <div>
             <label
               htmlFor="fullName"
               className="block text-sm font-medium text-[#7F3DFF]"
@@ -51,13 +54,13 @@ export default function Register() {
               id="fullName"
               name="fullName"
               type="text"
-              className="w-full p-3 border border-gray-300 rounded-md"
+              className="w-full p-3 border border-gray-300 rounded-[8px]  bg-white"
               value={formData.fullName}
               onChange={handleChange}
             />
           </div>
 
-          <div className="space-y-1">
+          <div>
             <label
               htmlFor="phoneNumber"
               className="block text-sm font-medium text-[#7F3DFF]"
@@ -68,13 +71,13 @@ export default function Register() {
               id="phoneNumber"
               name="phoneNumber"
               type="text"
-              className="w-full p-3 border border-gray-300 rounded-md"
+              className="w-full p-3 border border-gray-300 rounded-[8px]  bg-white"
               value={formData.phoneNumber}
               onChange={handleChange}
             />
           </div>
 
-          <div className="space-y-1">
+          <div>
             <label
               htmlFor="email"
               className="block text-sm font-medium text-[#7F3DFF]"
@@ -85,13 +88,13 @@ export default function Register() {
               id="email"
               name="email"
               type="text"
-              className="w-full p-3 border border-gray-300 rounded-md"
+              className="w-full p-3 border border-gray-300 rounded-[8px]  bg-white"
               value={formData.email}
               onChange={handleChange}
             />
           </div>
 
-          <div className="space-y-1">
+          <div>
             <label
               htmlFor="password"
               className="block text-sm font-medium text-[#7F3DFF]"
@@ -102,13 +105,13 @@ export default function Register() {
               id="password"
               name="password"
               type="text"
-              className="w-full p-3 border border-gray-300 rounded-md"
+              className="w-full p-3 border border-gray-300 rounded-[8px]  bg-white"
               value={formData.password}
               onChange={handleChange}
             />
           </div>
 
-          <div className="space-y-1">
+          <div>
             <label
               htmlFor="companyName"
               className="block text-sm font-medium text-[#7F3DFF]"
@@ -119,17 +122,17 @@ export default function Register() {
               id="companyName"
               name="companyName"
               type="text"
-              className="w-full p-3 border border-gray-300 rounded-md"
+              className="w-full p-3 border border-gray-300 rounded-[8px]  bg-white"
               value={formData.companyName}
               onChange={handleChange}
             />
           </div>
 
-          <div className="space-y-2">
+          <div className="mt-2">
             <p className="text-sm font-medium text-gray-800">
               Are you an Agency?<span className="text-red-500">*</span>
             </p>
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-6 mt-2">
               <label className="flex items-center space-x-2">
                 <input
                   type="radio"
@@ -152,15 +155,17 @@ export default function Register() {
               </label>
             </div>
           </div>
+        </div>
 
+        <div className="mt-auto pt-6">
           <button
             type="submit"
-            className="w-full py-3 bg-[#7F3DFF] text-white text-center rounded-md font-medium mt-8"
+            className="w-full py-3 bg-[#7F3DFF] text-white text-center rounded-[8px] font-medium hover:bg-[#6B2FE6] transition-colors duration-200"
           >
             Create Account
           </button>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   );
 }

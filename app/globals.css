@@ -4,8 +4,8 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 248, 248, 248;
+  --background-end-rgb: 248, 248, 248;
 }
 
 body {
@@ -36,5 +36,12 @@ input[type="radio"]:checked::before {
   height: 10px;
   border-radius: 50%;
   background-color: #7f3dff;
+}
+
+/* Prevent scrolling on the main container */
+html,
+body {
+  overflow: hidden;
+  height: 100%;
 }
 

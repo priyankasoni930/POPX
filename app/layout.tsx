@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex justify-center items-center min-h-screen bg-gray-100">
-          <div className="w-full max-w-md h-[800px] bg-white shadow-lg overflow-hidden">{children}</div>
+          <div className="w-full max-w-md h-[800px] bg-[#F8F8F8] shadow-lg overflow-hidden relative">{children}</div>
         </div>
       </body>
     </html>
